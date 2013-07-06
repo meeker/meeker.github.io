@@ -1,0 +1,11 @@
+---
+layout: default
+title: Article Archive
+---
+<h1>Article Archive</h1>
+
+<ul class="article-links">
+    {% for post in site.posts %}
+      <li><em>{{ post.date | date_to_string | date:"%Y-%b-%d"  }}</em> <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+</ul>
